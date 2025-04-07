@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono&family=Montserrat:wght@300;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100vh;
+  background: url('../img/movie_poster.jpg') center center no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 0;
+}
+
+.header-content {
+  z-index: 1;
+  color: #fff;
+  max-width: 700px;
+}
+
+.header-content h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  color: #e01b1b;
+  letter-spacing: 2px;
+}
+
+.header-content p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.studio-credit {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+section {
+  padding: 6rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8;
+}
+
+section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.teaser {
+  text-align: center;
+}
+
+.teaser iframe {
+  width: 100%;
+  max-width: 720px;
+  height: 405px;
+  border: none;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  background-color: #000;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, #222, #555, #222);
+  margin: 4rem 0;
+}
