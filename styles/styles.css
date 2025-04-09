@@ -15,30 +15,32 @@ body {
 }
 
 header {
-  height: 100vh;
-  background: url('../img/movie_poster.jpg') center center no-repeat;
-  background-size: cover;
   position: relative;
+  background-color: #e1e1e1 !important;
+  color: black;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   text-align: center;
-  padding: 2rem;
+  padding: 0; /* no internal spacing */
+  overflow: hidden;
 }
 
 header::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(225, 225, 225, 0.1);
   z-index: 0;
 }
 
 .header-content {
-  z-index: 1;
-  color: #fff;
+  z-index: 2;
   max-width: 700px;
+  margin-bottom: 2rem;
+  padding: 2rem;
 }
 
 .header-content h1 {
@@ -51,7 +53,7 @@ header::after {
 .header-content p {
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: #ccc;
+  color: #333;
   line-height: 1.5;
 }
 
@@ -59,7 +61,31 @@ header::after {
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #bbb;
+  color: #555;
+}
+
+.cutout-character {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0; /* remove spacing on right */
+  padding: 0;
+  width: 50vw;
+  max-width: 600px;
+  height: auto;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .cutout-character {
+    position: relative;
+    display: block;
+    margin: 0 auto 0 auto;
+    padding: 0;
+    width: 90vw;
+    max-width: 650px;
+    bottom: 0;
+  }
 }
 
 section {
@@ -86,7 +112,7 @@ section h2 {
   border: none;
   margin-top: 2rem;
   border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(225, 225, 225, 0.1);
 }
 
 footer {
@@ -100,6 +126,6 @@ footer {
 .divider {
   height: 1px;
   width: 100%;
-  background: linear-gradient(to right, #222, #555, #222);
-  margin: 4rem 0;
+  background: linear-gradient(to right, #222, #e1e1e1, #222);
+  margin: 0; /* remove vertical spacing to keep sections tight */
 }
